@@ -17,3 +17,8 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/get-users', 'MainController@getUser');
+Route::get('/reports',function(){
+    return view('report');
+})->name('reports');
+
+Route::post('/create-user','MainController@saveEmp');
